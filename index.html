@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>my phone</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="main">
+            <nav>
+                <div class="logo">
+                    <img src="img\logo.png">
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">Phone</a></li>
+                        <li><a href="#">Kaushik</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="information">
+                <div class="overlay"></div>
+                <img src="img\mi.jpg" class="mobile">
+                <div id="circle">
+                    <div class="feature one">
+                        <img src="img\display.jpg">
+                        <div>
+                            <h1>Display</h1>
+                            <p>6.1" super amoled display</p>
+                        </div>
+                    </div>
+                    <div class="feature two">
+                        <img src="img\processor.png">
+                        <div>
+                            <h1>Processor</h1>
+                            <p>Snapdragon 720g octa-core</p>
+                        </div>
+                    </div>
+                    <div class="feature three">
+                        <img src="img\battery.jpg">
+                        <div>
+                            <h1>Battery</h1>
+                            <p>4500 Mah battery</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="controls">
+                <img src="img\up-arrow.png" id="upBtn">
+                <h3>features</h3>
+                <img src="img\up-arrow.png" id="downBtn">
+            </div>
+        </div>
+        <script>
+            var circle=document.getElementById("circle");
+            var upBtne=document.getElementById("upBtn");
+            var downBtn=document.getElementById("downBtn");
+            var rotateValue=circle.style.transform;
+            var rotateSum;
+
+            upBtn.onclick=function(){
+                circle.style.transform=rotateSum;
+                rotateValue=rotateSum;
+            }
+            downBtn.onclick=function(){
+                rotateSum=rotateValue+"rotate(90deg)";
+                circle.style.transform=rotateSum;
+                rotateValue=rotateSum;
+            }
+        </script>
+    </body>
+    </html>
